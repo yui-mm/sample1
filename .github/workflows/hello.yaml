@@ -4,7 +4,7 @@ on: push # イベント
 
 jobs:
   hello: # Job Id
-    runs-on: ubuntu-latest
+    run-on: ubuntu-latest
     steps:
       - name: Hello World
         run: echo "Hello World!"
