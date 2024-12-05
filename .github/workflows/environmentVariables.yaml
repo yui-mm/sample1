@@ -1,0 +1,10 @@
+name: Variables
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    environment: Test
+    env:
+      KEY: ${{ vars.TEST_KEY }}
+    steps:
+      - run: echo "${KEY}"
