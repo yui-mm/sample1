@@ -1,0 +1,21 @@
+name: Choice
+on:
+  workflow_dispatch:
+    inputs:
+      choice:
+        type: choice
+        description: "Select your favorite color"
+        required: true
+        default: "blue"
+        options:
+          - red
+          - blue
+          - green
+          - yellow
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print selected color
+        run: echo "You selected ${{ inputs.choice }} color!"
