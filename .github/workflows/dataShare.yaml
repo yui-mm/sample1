@@ -2,7 +2,7 @@ name: Data Share
 on: push
 jobs:
   share:
-    runs-on: ubutnu-latest
+    runs-on: ubuntu-latest
     steps:
       - id: source
         run: echo "result=Hello" >> "${GITHUB_OUTPUT}"
