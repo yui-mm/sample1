@@ -1,0 +1,8 @@
+name: Data Share
+on: push
+jobs:
+  share:
+    runs-on: ubutnu-latest
+    steps:
+      - run: export RESULT="hello"
+      - run: echo "${RESULT}"
