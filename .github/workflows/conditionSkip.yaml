@@ -1,0 +1,11 @@
+name: COndition Skip
+on: push
+jobs:
+  skip-or-run:
+    runs-on: ubuntu-latest
+    env:
+      ACTOR: ${{ github.actor}}
+    steps:
+      - run: echo "${ACTOR}"
+      - run: echo "Hello"
+        if: ${{ env.ACTOR == 'test'}}
